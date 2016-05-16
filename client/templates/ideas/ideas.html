@@ -1,0 +1,25 @@
+<template name="ideas">
+  <div class="panel panel-info">
+    <div class="panel-heading">Gift ideas for Others
+      <div class="pull-right btn btn-xs btn-primary btnNewIdeaForOthers"><span class="glyphicon glyphicon-plus"></span> New Idea</div>
+    </div>
+      <div class="panel-body">
+        <ul class="list-group">
+          {{#each ideasForOthers}}
+            {{> ideaItem}}
+          {{/each}}
+        </ul>
+      </div>
+  </div>
+
+  <div class="panel panel-info">
+    <div class="panel-heading">Gift ideas for Me
+      <div class="pull-right btn btn-xs btn-primary btnNewIdeaForMe"><span class="glyphicon glyphicon-plus"></span> New Idea</div>
+    </div>
+      <div class="panel-body">
+        {{#each ideasForMe}}
+          {{> ideaItem}}
+        {{/each}}
+      </div>
+  </div>
+</template>
