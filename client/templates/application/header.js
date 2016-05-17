@@ -16,6 +16,13 @@ Template.header.helpers({
       return Meteor.user().username;
     }
   },
+  isActive: function(sOption) {
+    if (sOption === Session.get("currentOption")) {
+      return "active"
+    } else {
+      return ""
+    }
+  }
 });
 
 Template.header.events({
@@ -35,6 +42,15 @@ Template.header.events({
         Session.set("signedIn", false);
         Router.go("home");
     });
+  },
+  'click .btnGift': function(e) {
+    Session.set("currentOption", "GIFTS");
+  },
+  'click .btnPeople': function(e) {
+    Session.set("currentOption", "PEOPLE");
+  },
+  'click .btnMessages': function(e) {
+    Session.set("currentOption", "MESSAGES");
   }
 
 })

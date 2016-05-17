@@ -1,0 +1,14 @@
+<template name="messageList">
+  <div class="panel panel-info">
+    <div class="panel-heading">Messages
+      <div class="pull-right btn btn-xs btn-primary btnNewMessage"><span class="glyphicon glyphicon-plus"></span> New Message</div>
+    </div>
+      <div class="panel-body">
+        <ul class="list-group">
+          {{#each messageItems}}
+            {{> messageItem}}
+          {{/each}}
+        </ul>
+      </div>
+  </div>
+</template>

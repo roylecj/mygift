@@ -1,0 +1,14 @@
+<template name="peopleList">
+  <div class="panel panel-info">
+    <div class="panel-heading">Friends and Family
+      <a class="pull-right btn btn-xs btn-primary btnSearch" href="{{pathFor 'findPerson'}}"><span class="glyphicon glyphicon-search"></span> Find person</a>
+    </div>
+      <div class="panel-body">
+        <ul class="list-group">
+          {{#each person}}
+            {{> personItem}}
+          {{/each}}
+        </ul>
+      </div>
+  </div>
+</template>

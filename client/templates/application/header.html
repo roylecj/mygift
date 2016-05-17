@@ -34,9 +34,9 @@
         </div>
         {{#if signedIn}}
         <ul class="nav nav-tabs">
-          <li role="presentation" class="active"><a href="#"><span class="glyphicon glyphicon-gift"></span> Gifts</a></li>
-          <li role="presentation"><a href="#"><span class="glyphicon glyphicon-user"></span> People</a></li>
-          <li role="presentation"><a href="#"><span class="glyphicon glyphicon-envelope"></span> Messages <div class="badge">3</div></a></li>
+          <li role="presentation" class="{{isActive 'GIFTS'}} btnGift"><a href="{{pathFor 'ideas'}}"><span class="glyphicon glyphicon-gift"></span> Gifts</a></li>
+          <li role="presentation" class="{{isActive 'PEOPLE'}} btnPeople"><a href="{{pathFor 'peopleList'}}"><span class="glyphicon glyphicon-user"></span> People</a></li>
+          <li role="presentation" class="{{isActive 'MESSAGES'}} btnMessages"><a href="{{pathFor 'messageList'}}"><span class="glyphicon glyphicon-envelope"></span> Messages <div class="badge">3</div></a></li>
         </ul>
         {{/if}}
         </nav>
